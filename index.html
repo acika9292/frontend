@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel = "stylesheet" href = "/styles/core.css">
+  <title>Test frontend application</title>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 8px;
+      text-align: left;
+    }
+    th, td {
+      width: 150px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pirke frontend dev</h1>
+  <p>Woooooow!</p>
+  <h1>Player Information</h1>
+  
+  <form id="playerForm">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name"><br><br>
+    
+    <label for="surname">Surname:</label><br>
+    <input type="text" id="surname" name="surname"><br><br>
+    
+    <label for="atpRanking">ATP Ranking:</label><br>
+    <input type="number" id="atpRanking" name="atpRanking"><br><br>
+    
+    <label for="backend">Backend:</label><br>
+    <input type="text" id="backend" name="backend"><br><br>
+    
+    <label for="sponsorBrand">Sponsor Brand:</label><br>
+    <input type="text" id="sponsorBrand" name="sponsorBrand"><br><br>
+    
+    <label for="moneyEarned">Money Earned Current Year:</label><br>
+    <input type="number" id="moneyEarned" name="moneyEarned"><br><br>
+    
+    <button type="button" onclick="addPlayer()">Add Player</button>
+  </form>
+
+  <h2>Player Information Table</h2>
+  <table id="playerTable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>ATP Ranking</th>
+        <th>Backend</th>
+        <th>Sponsor Brand</th>
+        <th>Money Earned Current Year</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>

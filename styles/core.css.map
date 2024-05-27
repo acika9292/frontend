@@ -1,0 +1,14 @@
+{
+    "version": 3,
+    "mappings": "AIAA,AAAA,IAAI,CAAC;EACH,GAAG,EAAE,KAAK;CACX",
+    "sources": [
+        "core.scss",
+        "_global.scss",
+        "_variables.scss",
+        "_mixins.scss",
+        "_reset.scss",
+        "_home.scss"
+    ],
+    "names": [],
+    "file": "core.css"
+}
