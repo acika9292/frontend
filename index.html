@@ -1,67 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel = "stylesheet" href = "/styles/core.css">
-  <title>Test frontend application</title>
+  <title>Pirkeee ATP ranking</title>
+  <h1>Pirkeee ATP ranking 2024:</h1>
   <style>
-    table, th, td {
-      border: 1px solid black;
+    table {
+      width: 100%;
       border-collapse: collapse;
+    }
+
+    th,
+    td {
+      border: 1px solid black;
       padding: 8px;
       text-align: left;
     }
-    th, td {
-      width: 150px;
+
+    th {
+      cursor: pointer;
     }
   </style>
 </head>
+
 <body>
-  <h1>Pirke frontend dev</h1>
-  <p>Woooooow!</p>
-  <h1>Player Information</h1>
-  
+
   <form id="playerForm">
-    <label for="name">Name:</label><br>
-    <input type="text" id="name" name="name"><br><br>
-    
-    <label for="surname">Surname:</label><br>
-    <input type="text" id="surname" name="surname"><br><br>
-    
-    <label for="atpRanking">ATP Ranking:</label><br>
-    <input type="number" id="atpRanking" name="atpRanking"><br><br>
-    
-    <label for="backend">Backend:</label><br>
-    <input type="text" id="backend" name="backend"><br><br>
-    
-    <label for="sponsorBrand">Sponsor Brand:</label><br>
-    <input type="text" id="sponsorBrand" name="sponsorBrand"><br><br>
-    
-    <label for="moneyEarned">Money Earned Current Year:</label><br>
-    <input type="number" id="moneyEarned" name="moneyEarned"><br><br>
-    
-    <button type="button" onclick="addPlayer()">Add Player</button>
+    <input type="text" id="name" placeholder="Name" required style="display: block">
+    <input type="text" id="surname" placeholder="Surname" required style="display: block">
+    <input type="number" id="atpRanking" placeholder="ATP Ranking" required style="display: block">
+    <input type="text" id="backend" placeholder="Backend" required style="display: block">
+    <input type="text" id="sponsorBrand" placeholder="Sponsor Brand" required style="display: block;">
+    <input type="number" id="moneyEarned" placeholder="Money Earned" required style="display: block;">
+    <button type="button" onclick="addPlayer()" style="display: block">Add Player</button>
   </form>
 
-  <h2>Player Information Table</h2>
-  <table id="playerTable">
+  <table>
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Surname</th>
-        <th>ATP Ranking</th>
-        <th>Backend</th>
-        <th>Sponsor Brand</th>
-        <th>Money Earned Current Year</th>
+        <th onclick="sortTable('name')">Name</th>
+        <th onclick="sortTable('surname')">Surname</th>
+        <th onclick="sortTable('atpRanking')">ATP Ranking</th>
+        <th onclick="sortTable('backend')">Backend</th>
+        <th onclick="sortTable('sponsorBrand')">Sponsor Brand</th>
+        <th onclick="sortTable('moneyEarned')">Money Earned</th>
+        <th>Actions</th>
       </tr>
     </thead>
-    <tbody>
-    </tbody>
+    <tbody id="playerData"></tbody>
   </table>
 
   <script src="js/script.js"></script>
 
 </body>
+
 </html>
